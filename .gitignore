@@ -49,7 +49,7 @@ TestResults/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Workspace files (често съдържат локални пътища)
+# Workspace files (Г·ГҐГ±ГІГ® Г±ГєГ¤ГєГ°Г¦Г ГІ Г«Г®ГЄГ Г«Г­ГЁ ГЇГєГІГЁГ№Г )
 *.code-workspace
 
 ############################
@@ -65,13 +65,13 @@ Desktop.ini
 # NuGet
 ############################
 
-# (По принцип packages/ не се ползва при SDK-style, но ако го имаш)
+# (ГЏГ® ГЇГ°ГЁГ­Г¶ГЁГЇ packages/ Г­ГҐ Г±ГҐ ГЇГ®Г«Г§ГўГ  ГЇГ°ГЁ SDK-style, Г­Г® Г ГЄГ® ГЈГ® ГЁГ¬Г Гё)
 packages/
 *.nupkg
 *.snupkg
 
 ############################
-# Node (ако имаш фронтенд)
+# Node (Г ГЄГ® ГЁГ¬Г Гё ГґГ°Г®Г­ГІГҐГ­Г¤)
 ############################
 
 node_modules/
@@ -83,17 +83,17 @@ yarn-error.log*
 # ASP.NET Core local secrets / env
 ############################
 
-# env файлове
+# env ГґГ Г©Г«Г®ГўГҐ
 .env
 .env.*
 
-# Ако държиш локални connection strings/ключове тук – по-добре не ги commit-вай
+# ГЂГЄГ® Г¤ГєГ°Г¦ГЁГё Г«Г®ГЄГ Г«Г­ГЁ connection strings/ГЄГ«ГѕГ·Г®ГўГҐ ГІГіГЄ вЂ“ ГЇГ®-Г¤Г®ГЎГ°ГҐ Г­ГҐ ГЈГЁ commit-ГўГ Г©
 appsettings.Development.json
 appsettings.Local.json
 appsettings.*.local.json
 
 ############################
-# SQLite (твоя случай: products.db)
+# SQLite 
 ############################
 
 *.db
