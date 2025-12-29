@@ -1,0 +1,38 @@
+﻿@model MVC.Intro.Models.Product
+
+@{
+    ViewData["Title"] = "Детайли за продукт";
+}
+
+<section class="page-hero py-4 mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+            <p class="text-uppercase text-danger fw-semibold small mb-1">Каталог</p>
+            <h1 class="h3 fw-bold mb-2">Детайли за продукт</h1>
+            <p class="text-secondary mb-0">Проверете ключовите данни за избрания продукт.</p>
+        </div>
+        <a class="btn btn-outline-dark" asp-action="Index">← Назад към продуктите</a>
+    </div>
+</section>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3 text-secondary">ID</dt>
+            <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Id)</dd>
+
+            <dt class="col-sm-3 text-secondary">Име</dt>
+            <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Name)</dd>
+
+            <dt class="col-sm-3 text-secondary">Цена</dt>
+            <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Price)</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="d-flex gap-2 mt-3">
+    <a class="btn btn-outline-dark" asp-action="Index">Назад</a>
+    <form asp-action="Delete" asp-controller="Product" asp-route-id="@Model.Id" method="post" onsubmit="return confirm('Сигурни ли сте, че искате да изтриете продукта?');">
+        <button type="submit" class="btn btn-outline-danger">Изтрий</button>
+    </form>
+</div>

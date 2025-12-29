@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC.Intro.styles.css" asp-append-version="true" />
+</head>
+<body class="@ViewData["BodyClass"]">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-2" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/chikagobulls.jpg" alt="Chicago Bulls logo" class="nav-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString()=="Privacy" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString()=="Events" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Events">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark @(ViewContext.RouteData.Values["controller"]?.ToString()=="Product" ? "active" : "")"
+                               asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark @(ViewContext.RouteData.Values["controller"]?.ToString()=="Routing" ? "active" : "")"
+                               asp-area="" asp-controller="Routing" asp-action="Default">Players</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav d-flex flex-row align-items-center">
+                        <li class="nav-item me-3 d-flex align-items-center">
+                            <button id="theme-toggle" class="btn btn-link text-dark border-0 p-2" style="font-size: 1.5rem; cursor: pointer;" title="Превключи тема">
+                                💡
+                            </button>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            var currentUser = await UserManager.GetUserAsync(User);
+                            <li class="nav-item me-3 d-flex align-items-center">
+                                <span class="badge bg-warning text-dark px-3 py-2">Здравей, @(currentUser?.FullName ?? currentUser?.Email ?? User.Identity.Name)!</span>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <form asp-controller="Account" asp-action="Logout" method="post" class="mb-0">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Изход</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark @(ViewContext.RouteData.Values["controller"]?.ToString()=="Account" && ViewContext.RouteData.Values["action"]?.ToString()=="Login" ? "active" : "")"
+                                   asp-area="" asp-controller="Account" asp-action="Login">Вход</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark @(ViewContext.RouteData.Values["controller"]?.ToString()=="Account" && ViewContext.RouteData.Values["action"]?.ToString()=="Register" ? "active" : "")"
+                                   asp-area="" asp-controller="Account" asp-action="Register">Регистрация</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - MVC.Intro - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

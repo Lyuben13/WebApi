@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Чикаго Булс";
+}
+
+<section class="hero-banner py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <p class="text-uppercase text-danger fw-semibold small mb-2">NBA · Chicago</p>
+                <h1 class="display-4 fw-bold mb-3 hero-title">Чикаго Булс духът на 90-те</h1>
+                <p class="lead text-secondary">
+                    От създаването си през 1966 г. „Биковете“ превърнаха Чикаго в баскетболна столица.
+                    Тимът, воден от Майкъл Джордън и Скот Пипън, спечели сърцата на милиони със своя
+                    хъс, финес и шест шампионски пръстена.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a class="btn btn-danger btn-lg px-4" href="#history">Виж историята</a>
+                    <a class="btn btn-outline-dark btn-lg px-4" href="#logo">Логото</a>
+                </div>
+                <div class="d-flex flex-wrap gap-4 mt-5 hero-stats">
+                    <div class="stat">
+                        <span class="display-6 fw-bold text-danger">6</span>
+                        <small class="text-secondary d-block">титли NBA</small>
+                    </div>
+                    <div class="stat">
+                        <span class="display-6 fw-bold text-danger">1995–98</span>
+                        <small class="text-secondary d-block">вторият трипъл</small>
+                    </div>
+                    <div class="stat">
+                        <span class="display-6 fw-bold text-danger">72</span>
+                        <small class="text-secondary d-block">победи 95/96</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="logo-card shadow-lg" id="logo">
+                    <img src="~/images/chikagobulls.jpg" alt="Логото на Чикаго Булс" class="img-fluid rounded">
+                    <p class="text-center text-secondary mt-3 mb-0">
+                        Червен бик, гледащ право към противника – емблема на сила и решителност.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="history" class="history-section py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <!-- ✅ ЛЯВО: заключено като light компонент -->
+            <div class="col-lg-6 history-card" data-bs-theme="light">
+                <h2 class="fw-bold mb-3">История накратко</h2>
+                <p class="text-secondary mb-3">
+                    Основаването през 1966 г. поставя Чикаго отново на баскетболната карта.
+                    С идването на Майкъл Джордън през 1984 г. започва ера на глобална доминация,
+                    а трипълите от 1991–93 и 1995–98 превръщат отбора в легенда.
+                </p>
+                <div class="list-group history-steps shadow-sm">
+                    <div class="list-group-item">
+                        <span class="badge bg-danger me-2">1966</span>
+                        Ражда се франчайзът „Булс“.
+                    </div>
+                    <div class="list-group-item">
+                        <span class="badge bg-danger me-2">1984</span>
+                        Драфтът на Майкъл Джордън променя всичко.
+                    </div>
+                    <div class="list-group-item">
+                        <span class="badge bg-danger me-2">1991–1993</span>
+                        Първи трипъл под ръководството на Фил Джаксън.
+                    </div>
+                    <div class="list-group-item">
+                        <span class="badge bg-danger me-2">1995–1998</span>
+                        Втори трипъл и рекордните 72 победи през 95/96.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ДЯСНО: остава както си е (тъмна карта при dark theme) -->
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm legacy-card">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="fw-semibold">Наследство</h3>
+                            <p class="text-secondary">
+                                Булс промениха начина, по който светът гледа на NBA – от културата на
+                                печелившия манталитет до глобалното влияние върху модата и маркетинга.
+                                Тяхната енергия и бранд остават вдъхновение за новите поколения фенове.
+                            </p>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a class="pill text-decoration-none"
+                               asp-controller="Routing" asp-action="Default">
+                                Майкъл Джордън
+                            </a>
+                            <a class="pill text-decoration-none"
+                               asp-controller="Routing" asp-action="Default">
+                                Скот Пипън
+                            </a>
+                            <a class="pill text-decoration-none"
+                               asp-controller="Routing" asp-action="Default">
+                                Денис Родман
+                            </a>
+                            <a class="pill text-decoration-none"
+                               asp-controller="Routing" asp-action="Default">
+                                Фил Джаксън
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

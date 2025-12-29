@@ -1,0 +1,45 @@
+﻿@model MVC.Intro.Models.Product
+
+@{
+    ViewData["Title"] = "Нов продукт";
+}
+
+<section class="page-hero py-4 mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+            <p class="text-uppercase text-danger fw-semibold small mb-1">Каталог</p>
+            <h1 class="h3 fw-bold mb-2">Добавете нов продукт</h1>
+            <p class="text-secondary mb-0">Попълнете името и цената, за да се появи в списъка.</p>
+        </div>
+        <a class="btn btn-outline-dark" asp-action="Index">← Назад към продуктите</a>
+    </div>
+</section>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form asp-action="CreateProduct" class="row g-3">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-md-6">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" placeholder="Пример: Bulls Hoodie" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="Price" class="form-label"></label>
+                <input asp-for="Price" class="form-control" type="number" step="0.01" placeholder="Пример: 99.99" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="col-12 d-flex gap-2">
+                <button type="submit" class="btn btn-danger">Запази</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Отказ</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

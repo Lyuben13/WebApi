@@ -1,0 +1,475 @@
+﻿/* ──────────────────────────────────────────────────────────────
+   1. Root font size – responsive
+   ────────────────────────────────────────────────────────────── */
+html {
+  font-size: 14px;               /* mobile / small screens */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;             /* tablets & larger */
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   2. Custom focus outline (Bootstrap-compatible)
+   ────────────────────────────────────────────────────────────── */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb !important;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   3. Full-height page + footer spacing
+   ────────────────────────────────────────────────────────────── */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;           /* space for a fixed footer */
+}
+
+/* ──────────────────────────────────────────────────────────────
+   4. Optional: make the footer stick to the bottom
+   ────────────────────────────────────────────────────────────── */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;                 /* must match body margin-bottom */
+  line-height: 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   5. Home page – hero, история и лого
+   ────────────────────────────────────────────────────────────── */
+.hero-banner {
+  background: radial-gradient(120% 120% at 10% 10%, #ffeaea, transparent 50%),
+              radial-gradient(80% 80% at 90% 20%, #f8f9fa, transparent 50%),
+              #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+.hero-stats {
+  margin-top: 2rem !important;
+}
+
+.hero-stats .stat {
+  min-width: 100px;
+}
+
+.hero-stats .stat span {
+  line-height: 1;
+  font-size: 2rem !important;
+}
+
+.hero-stats .stat small {
+  font-size: 0.85rem;
+}
+
+.logo-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+.history-steps .list-group-item {
+  border: none;
+  border-bottom: 1px solid #f0f1f3;
+  display: flex;
+  align-items: center;
+}
+
+.history-steps .list-group-item:last-child {
+  border-bottom: none;
+}
+
+.history-steps .badge {
+  min-width: 78px;
+  font-weight: 700;
+}
+
+.legacy-card {
+  border: none;
+  border-radius: 18px;
+}
+
+.pill {
+  background: #fde8ec;
+  color: #b02a37;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.hero-title {
+  white-space: nowrap;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   6. Products pages
+   ────────────────────────────────────────────────────────────── */
+.page-hero {
+  background: linear-gradient(120deg, #fff5f7 0%, #ffffff 40%, #f7f9fc 100%);
+  border: 1px solid #f1f3f5;
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.card.table-card {
+  border-radius: 14px;
+}
+
+.table thead th {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #fff5f7;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   7. Legends table (Players page)
+   ────────────────────────────────────────────────────────────── */
+.legend-card {
+  border: 1px solid #f1f3f5;
+  border-radius: 12px;
+}
+
+.legend-table th {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.legend-table td {
+  vertical-align: middle;
+}
+
+.legend-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  object-fit: cover;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   8. Navbar logo
+   ────────────────────────────────────────────────────────────── */
+.nav-logo {
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   9. Events timeline
+   ────────────────────────────────────────────────────────────── */
+.timeline-card {
+  border-radius: 18px;
+  border: 1px solid #f1f3f5;
+}
+
+.timeline-table th {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.timeline-table td {
+  vertical-align: middle;
+}
+
+.table thead th {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   10. Account pages (Login / Register) background – full screen
+   ────────────────────────────────────────────────────────────── */
+body.account-page {
+  background-image: url('../images/13635.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.account-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* header + footer */
+  padding: 2rem 0;
+}
+
+.account-box {
+  background-color: transparent;
+  padding: 24px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+  max-width: 480px;
+  width: 100%;
+}
+
+.account-box h2 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.account-box .form-label {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.account-box .form-control {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.account-box a {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-decoration: underline;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   11. Dark theme styles
+   ────────────────────────────────────────────────────────────── */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-theme .navbar {
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  border-bottom-color: #444 !important;
+  backdrop-filter: blur(10px);
+}
+
+body.dark-theme .navbar-brand,
+body.dark-theme .nav-link,
+body.dark-theme .navbar-text {
+  color: #e0e0e0 !important;
+}
+
+body.dark-theme .nav-link:hover {
+  color: #fff !important;
+}
+
+body.dark-theme .container {
+  background-color: transparent;
+  padding: 20px;
+}
+
+body.dark-theme .card {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-theme .table {
+  color: #e0e0e0;
+}
+
+body.dark-theme .table-hover tbody tr:hover {
+  background-color: #3d3d3d;
+}
+
+body.dark-theme .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+body.dark-theme .btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+body.dark-theme .btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+body.dark-theme .footer {
+  background-color: rgba(45, 45, 45, 0.8);
+  color: #e0e0e0;
+  border-top-color: #444;
+}
+
+body.dark-theme .badge {
+  color: #000;
+}
+
+body.dark-theme .form-control {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-theme .form-control:focus {
+  background-color: #2d2d2d;
+  border-color: #0d6efd;
+  color: #e0e0e0;
+}
+
+body.dark-theme .hero-banner {
+  background: radial-gradient(120% 120% at 10% 10%, rgba(255, 234, 234, 0.1), transparent 50%),
+              radial-gradient(80% 80% at 90% 20%, rgba(248, 249, 250, 0.1), transparent 50%),
+              transparent;
+  border-radius: 24px;
+  box-shadow: none;
+}
+
+body.dark-theme .logo-card {
+  background: rgba(45, 45, 45, 0.8);
+  border-color: #444;
+}
+
+body.dark-theme .page-hero {
+  background: rgba(45, 45, 45, 0.6);
+  border-color: #444;
+}
+
+body.dark-theme .legend-card {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+body.dark-theme .timeline-card {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+body.dark-theme .list-group-item {
+  background-color: transparent;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+body.dark-theme .history-steps .list-group-item {
+  border-bottom-color: #444;
+}
+
+body.dark-theme .pill {
+  background: rgba(220, 53, 69, 0.2);
+  color: #ff6b7a;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+body.dark-theme main {
+  background-color: transparent;
+}
+
+body.dark-theme .legend-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #e0e0e0;
+}
+
+body.dark-theme .legend-table th {
+  background-color: #333;
+  padding: 12px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid #444;
+}
+
+body.dark-theme .legend-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #444;
+  vertical-align: middle;
+}
+
+body.dark-theme .legend-table tr:hover td {
+  background-color: #3d3d3d;
+}
+
+body.dark-theme .legend-table img {
+  width: 72px !important;
+  height: 72px !important;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+body.dark-theme .legend-table a.btn {
+  background-color: #0d6efd;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+body.dark-theme .legend-table a.btn:hover {
+  background-color: #0b5ed7;
+}
+
+.history-card{
+  background: #fff;
+  color: #111;
+}
+.history-card h1,
+.history-card h2,
+.history-card h3,
+.history-card p,
+.history-card li,
+.history-card span{
+  color: #111 !important;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   FIX: "История накратко" да е черен текст на светъл фон в dark theme
+   ────────────────────────────────────────────────────────────── */
+body.dark-theme .history-card {
+  color: #111 !important;
+}
+
+body.dark-theme .history-card h1,
+body.dark-theme .history-card h2,
+body.dark-theme .history-card h3,
+body.dark-theme .history-card p,
+body.dark-theme .history-card li,
+body.dark-theme .history-card span {
+  color: #111 !important;
+}
+
+/* Bootstrap .text-secondary на светъл фон да е по-тъмно */
+body.dark-theme .history-card .text-secondary {
+  color: #444 !important;
+}
+
+/* При теб dark-theme прави list-group-item transparent + светъл текст.
+   Тук го връщаме на бяло + черно, само вътре в "История накратко". */
+body.dark-theme .history-card .list-group-item {
+  background: #fff !important;
+  color: #111 !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Баджовете да си останат четими */
+body.dark-theme .history-card .badge {
+  color: #fff !important;
+}

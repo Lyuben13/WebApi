@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Players";
+}
+
+<section class="page-hero py-4 mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+            <h1 class="h3 fw-bold mb-2">Легенди на Булс</h1>
+            <p class="text-secondary mb-0">Галерия с ключови играчи – снимки, роли, акценти и линкове към Wikipedia.</p>
+        </div>
+    </div>
+</section>
+
+<section class="card shadow-lg border-0 legend-card rounded-4">
+    <div class="card-body p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h4 fw-bold">Легенди на Булс</h2>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="bg-dark text-white">
+                    <tr>
+                        <th style="width: 110px;">Снимка</th>
+                        <th style="width: 200px;">Име</th>
+                        <th style="width: 120px;">Роля</th>
+                        <th>Акценти / Бележки</th>
+                        <th style="width: 160px;">Wikipedia</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+
+                    <!-- 1 -->
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/images/mj.jpg")" class="legend-photo rounded shadow-sm" alt="MJ">
+                        </td>
+                        <td class="fw-semibold">Майкъл Джордън</td>
+                        <td><span class="badge bg-danger">SG</span></td>
+                        <td>6x шампион · 5x MVP · Икона на 90-те.</td>
+                        <td><a class="btn btn-outline-primary btn-sm" target="_blank" href="https://bg.wikipedia.org/wiki/Майкъл_Джордан">Wikipedia</a></td>
+                    </tr>
+
+                    <!-- 2 -->
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/images/SkotiP.jpg")" class="legend-photo rounded shadow-sm" alt="Pippen">
+                        </td>
+                        <td class="fw-semibold">Скот Пипън</td>
+                        <td><span class="badge bg-primary">SF</span></td>
+                        <td>Дефанзивно сърце на отбора · 6x шампион.</td>
+                        <td><a class="btn btn-outline-primary btn-sm" target="_blank" href="https://bg.wikipedia.org/wiki/Скоти_Пипън">Wikipedia</a></td>
+                    </tr>
+
+                    <!-- 3 -->
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/images/DenisRodman.jpg")" class="legend-photo rounded shadow-sm" alt="Rodman">
+                        </td>
+                        <td class="fw-semibold">Денис Родман</td>
+                        <td><span class="badge bg-success">PF</span></td>
+                        <td>Господар на борбата · Енергия · Психо игра.</td>
+                        <td><a class="btn btn-outline-primary btn-sm" target="_blank" href="https://bg.wikipedia.org/wiki/Денис_Родман">Wikipedia</a></td>
+                    </tr>
+
+                    <!-- 4 -->
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/images/филДжаксън.jpg")" class="legend-photo rounded shadow-sm" alt="Jackson">
+                        </td>
+                        <td class="fw-semibold">Фил Джаксън</td>
+                        <td><span class="badge bg-dark">Coach</span></td>
+                        <td>Триъгълното нападение · 6 титли с Булс.</td>
+                        <td><a class="btn btn-outline-primary btn-sm" target="_blank" href="https://bg.wikipedia.org/wiki/Фил_Джаксън">Wikipedia</a></td>
+                    </tr>
+
+                    <!-- 5 -->
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/images/toni.jpg")" class="legend-photo rounded shadow-sm" alt="Toni">
+                        </td>
+                        <td class="fw-semibold">Тони Кукоч</td>
+                        <td><span class="badge bg-warning text-dark">SF/PF</span></td>
+                        <td>Шести човек · Европейски плеймейкър с финес.</td>
+                        <td><a class="btn btn-outline-primary btn-sm" target="_blank" href="https://bg.wikipedia.org/wiki/Тони_Кукоч">Wikipedia</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
