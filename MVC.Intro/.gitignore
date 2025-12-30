@@ -49,7 +49,7 @@ TestResults/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Workspace files (÷åñòî ñúäúðæàò ëîêàëíè ïúòèùà)
+# Workspace files 
 *.code-workspace
 
 ############################
@@ -65,13 +65,12 @@ Desktop.ini
 # NuGet
 ############################
 
-# (Ïî ïðèíöèï packages/ íå ñå ïîëçâà ïðè SDK-style, íî àêî ãî èìàø)
 packages/
 *.nupkg
 *.snupkg
 
 ############################
-# Node (àêî èìàø ôðîíòåíä)
+# Node 
 ############################
 
 node_modules/
@@ -83,11 +82,9 @@ yarn-error.log*
 # ASP.NET Core local secrets / env
 ############################
 
-# env ôàéëîâå
 .env
 .env.*
 
-# Àêî äúðæèø ëîêàëíè connection strings/êëþ÷îâå òóê – ïî-äîáðå íå ãè commit-âàé
 appsettings.Development.json
 appsettings.Local.json
 appsettings.*.local.json
