@@ -17,16 +17,32 @@
 
 <div class="card shadow-sm">
     <div class="card-body">
-        <dl class="row mb-0">
-            <dt class="col-sm-3 text-secondary">ID</dt>
-            <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Id)</dd>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                @if (!string.IsNullOrWhiteSpace(Model.ImagePath))
+                {
+                    <img src="@Model.ImagePath" alt="Product image" class="img-fluid rounded" />
+                }
+                else
+                {
+                    <div class="border rounded d-flex align-items-center justify-content-center text-secondary" style="height: 220px;">
+                        Няма снимка
+                    </div>
+                }
+            </div>
+            <div class="col-md-8">
+                <dl class="row mb-0">
+                    <dt class="col-sm-3 text-secondary">ID</dt>
+                    <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Id)</dd>
 
-            <dt class="col-sm-3 text-secondary">Име</dt>
-            <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Name)</dd>
+                    <dt class="col-sm-3 text-secondary">Име</dt>
+                    <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Name)</dd>
 
-            <dt class="col-sm-3 text-secondary">Цена</dt>
-            <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Price)</dd>
-        </dl>
+                    <dt class="col-sm-3 text-secondary">Цена</dt>
+                    <dd class="col-sm-9 fw-semibold">@Html.DisplayFor(model => model.Price)</dd>
+                </dl>
+            </div>
+        </div>
     </div>
 </div>
 
