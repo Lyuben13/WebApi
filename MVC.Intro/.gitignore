@@ -96,3 +96,7 @@ appsettings.*.local.json
 *.db
 *.db-shm
 *.db-wal
+
+# Uploaded files (runtime)
+MVC.Intro/wwwroot/uploads/
+**/wwwroot/uploads/
